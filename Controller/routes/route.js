@@ -6,7 +6,8 @@ router.get('/login',function(req,res){
     console.log("WELCOME!!");
     res.render("vlogin");
 })
-router.post('/validate',function(req,res){
+
+router.post('/validate',async(req,res)=>{
     var email=req.body.Email; 
     var pwd=req.body.password;
      try{
@@ -16,19 +17,9 @@ router.post('/validate',function(req,res){
              if (err)
                  throw err;
              if (results) {
+              
                  connection.query('select password from voter_login where email like ? and password like ?)', [email, pwd], (_err, data) => {
-                    function resolveAfter2Seconds() {
-                        return new Promise(resolve => {
-                          setTimeout(() => {
-                            res.render("vlogin");
-                          }, 2000);
-                        });
-                      }
-                      async function asyncCall() {
-                        console.log('calling');
-                        const result = await resolveAfter2Seconds();
-                        console.log(result);
-                      }
+                    
                      res.render("vote-reg");
 
                  });
@@ -44,7 +35,7 @@ catch(err){
     connection.rollback();
 }
 })
-router.post('/vali',function(req,res){
+router.post('/vali',async(req,res)=>{
     var choice=req.body.vote;
 
 console.log(choice);
@@ -56,22 +47,12 @@ connection.query('UPDATE vote set voteCount=voteCount+1 where userId=?',[choice]
 })
 
 })
-router.get('/adminlogin',function(req,res){
+router.get('/adminlogin',async(req,res)=>{
     console.log("WELCOME!!");
     res.render("alogin");
 })
-router.post('/advali',function(req,res){ 
-    function resolveAfter2Seconds() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        res.render("vlogin");
-      }, 2000);
-    });
-  }
-  async function asyncCall() {
-    const result = await resolveAfter2Seconds();
-    console.log(result);
-  }
+router.post('/advali',async(req,res)=>{ 
+    
     var email=req.body.Email; 
     var pwd=req.body.password;
      connection.query('select email from admin_login where email like ?',[email],(err,results)=>{
@@ -94,7 +75,7 @@ router.post('/advali',function(req,res){
 
 })
 
-router.get('/index',function(req,res){
+router.get('/index',async(req,res)=>{
     console.log("WELCOME!!");
     res.render("index");
 })
