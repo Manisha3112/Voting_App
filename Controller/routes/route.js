@@ -2,7 +2,7 @@ const { decodeBase64 } = require('bcryptjs');
 var express= require('express');
 var connection=require('../../model/database.js');
 const router=express.Router()
-router.get('/login',function(req,res){
+router.get('/login',async(req,res){
     console.log("WELCOME!!");
     res.render("vlogin");
 })
