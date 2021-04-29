@@ -58,3 +58,17 @@ img{
 {
     margin-right: 20px;
 }
+.cont{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+    background-color:#c2eaf5;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px;
+    border-radius:10px;
+}

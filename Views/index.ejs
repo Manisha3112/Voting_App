@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="cont">
+      <div class="sub1">
+        <img id="img" src=https://aanoip.org/wp-content/uploads/2018/07/online-elections-02.jpg>
+    </div>
         <div class="sub2">
             <form name="form4" action="/ind" method="POST">
            <div> <center><h1>VOTING APP</h1></center> </div>
@@ -27,7 +30,7 @@
 <script>
  async function myDisplay() {
   let myPromise = new Promise(function(myResolve, myReject) {
-    setTimeout(function() { myResolve("HAPPY TO WELCOME YOU!!!"); }, 2000);
+    setTimeout(function() { myResolve("<h3>HAPPY TO WELCOME YOU!!!</h3>"); }, 2000);
   });
   document.getElementById("demo").innerHTML = await myPromise;
 }
