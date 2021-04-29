@@ -45,7 +45,6 @@ table {
   box-shadow:5px 5px;
   border-radius:10px;
 }
-
 th {
   text-shadow: 2px 2px red;
   background-color: rgb(222, 135, 186);
@@ -55,9 +54,6 @@ tr:nth-child(even) {
   
   color:black;
 }
-
-
-
 .table {
   width: 100%;
   position: absolute;

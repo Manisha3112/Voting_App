@@ -1,8 +1,9 @@
 body{
-    background-color:#20bf55;
-    background:linear-gradient(315deg, #20bf55 0%, #01baef 74%)no-repeat ;
-    background-color: #0cbaba;
-background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+
+
 
   
 }
@@ -52,4 +53,8 @@ img{
     background-color:rgb(124, 218, 241);
     border-radius: 7px;
     color:black;
+}
+.b1
+{
+    margin-right: 20px;
 }
