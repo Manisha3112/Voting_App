@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/CSS/slo.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="sub2">
+            <center><h1>ADMIN LOGIN</h1></center>
+            <form name="form1" action="/advali" onsubmit="return requ()" method="POST">
+                <div><input type="text" id="uname" name="uname" placeholder="Username"></div><br>
+                <div><input type="text" id="email" name="Email" placeholder="Email"></div><br>
+                <div><input type="password" id="pd" name="password" placeholder="Password"></div><br>
+               
+                    
+               <center>
+               
+               <input type="submit" value="Login" id="submit" placeholder="Login">
+               <input type="reset" value="Reset"id="reset" placeholder="Reset">
+                 
+            </center>
+            
+            </form>
+        </div>
+        
+    </div>
+    <script>
+  function requ()
+{
+
+var uname=document.forms["form1"]["uname"].value;
+var empt = document.forms["form1"]["pd"].value;
+var e = document.forms["form1"]["email"].value;
+
+if(uname==""||empt==""||e=="")
+    {
+        alert("FILL EVERY FIELDS!!");
+        return false;
+    }
+    var regName = /^[a-zA-Z]+$/;
+      if(!regName.test(uname)){
+        alert('Name should contains only alphabets!!!');
+    }
+    
+    var em=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if(!em.test(e)){
+    alert("INVALID EMAIL");
+     }
+// if ((empt == "adminjs")&&(e == "admin@gmail.com"))
+// {
+// alert("LOGIN SUCCESSFUL");
+// return true;
+// }
+// else 
+// {
+// alert('check your email and password');
+// return false; 
+// }
+ }  
+
+
+    </script>
+        </body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/CSS/ms.css">
+</head>
+<body>
+    <center>
+    <div class="table data" id="flex-container">
+        <div class "c1">
+            <h2>VOTE RESULT</h2>
+        </div>
+        <div class "c1">
+            <table border="1">
+                <tr>
+                    <th>S.NO</th>
+                    <th>NAME</th>
+                    <th>USER ID</th>
+                    <th>VOTE COUNT</th>
+                    
+                </tr>
+                <% if(userData.length!=0){%>
+                <%var i=1;%>
+            <%userData.forEach(function(data){%>
+            <tr>
+                <td><%= i;%></td>
+                <td><%= data.username %></td>
+                <td><%= data.userId %></td>
+                <td><%= data.voteCount %></td>
+            </tr>
+        <% i++;})%>
+        <%} else{%>
+        <tr>
+            <td colspan="9">No data found</td>
+        </tr>
+        
+       <% }%>
+        
+    
+            </table>
+        </div>
+    </div>
+</center>
+</body>
+</html>

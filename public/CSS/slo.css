@@ -1,0 +1,55 @@
+body{
+    background-color:#20bf55;
+    background:linear-gradient(315deg, #20bf55 0%, #01baef 74%)no-repeat ;
+    background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+  
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+    background-color:#c2eaf5;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    border-radius:10px;
+}
+img{
+    height:400px;
+    width:400px;
+}
+.sub1{
+    padding:15px;
+}
+.sub2{
+    padding:15px;
+}
+#uname,#rono,#email,#pd,#cpd,#aad{
+    border:double black;
+    background-color:white;
+     width:90%;
+    padding:5px;
+    border-radius:10px;
+}
+::placeholder{
+    
+    color:black;
+}
+#submit{
+    padding:5px;
+    background-color:rgb(124, 218, 241);
+    border-radius: 7px;
+    color:black;
+}
+#reset{
+    padding:5px;
+    background-color:rgb(124, 218, 241);
+    border-radius: 7px;
+    color:black;
+}
